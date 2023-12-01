@@ -1,48 +1,7 @@
-Sure, here are the steps to send a message from one device to another using the server and client programs:
-
-1. **Save the Server and Client Programs**: Save the `Server.java`, `ClientHandler.java`, and `Client.java` files on both devices in the same directory.
-
-2. **Find the Server's IP Address**: On the device that will run the server program, find the IP address. This is usually available in the network settings of the device. Let's say the IP address is `192.168.1.5`.
-
-3. **Update the Client Program**: In the `Client.java` file on the device that will run the client program, replace `"localhost"` with the server's IP address. So it should look like this:
-
-    ```java
-    private static final String SERVER_IP = "192.168.1.5";
-    ```
-
-4. **Compile the Programs**: On both devices, open a terminal (or command prompt), navigate to the directory containing the `.java` files, and compile all the files using the command:
-
-    ```bash
-    javac Server.java ClientHandler.java Client.java
-    ```
-
-5. **Run the Server Program**: On the server device, run the `Server` program with the command:
-
-    ```bash
-    java Server
-    ```
-
-    The server is now listening for connections.
-
-6. **Run the Client Program**: On the client device, run the `Client` program with the command:
-
-    ```bash
-    java Client
-    ```
-
-    The client is now connected to the server.
-
-7. **Send Messages**: On the client device, type messages into the terminal and press `Enter`. Each message will be sent to the server.
-
-8. **Receive Messages**: On the server device, you will see the messages received from the client displayed in the terminal.
-
-Remember, both devices need to be connected to the same network, and you need to have the Java Development Kit (JDK) installed to compile and run the Java programs. If you're still having trouble, please provide more details about the issue you're facing so I can assist you better. 😊
-
-
-
-If both devices (the server and the client) are on the same local network (like the same Wi-Fi network at your home or office), then you should use the IPv4 address of the server device. This is often called the local IP address or private IP address, and it usually starts with `192.168.x.x` or `10.x.x.x`.
-
-If the devices are not on the same local network, and you want to connect over the internet, then you would need to use the public IP address of the server device. However, connecting over the internet can be more complex because of firewalls and routers. You might need to set up port forwarding on your router to allow the client to connect to the server.
-
-Please note that sharing your public IP address can expose your device to security risks. Always ensure you have adequate security measures in place when running a server that's accessible over the internet. 😊
-
+First, open the cmd twice, one for Server and last for Client.
+Then in first cmd type `java Server` and hit the enter
+In another opened cmd type `java Client` and hit the enter
+And to exchange the messages with another device under same wifi connection which has the same IP address
+If you're not under the same wifi then use the public IP address which can get by typing the 'What is my ip address' in web browser
+Lastly, when you get your ip address then `private static final String SERVER_IP = "localhost";` replace your ip address in localhost
+then run that edited code in the device you want to exchange messages
